@@ -8,8 +8,6 @@ export default function Container(props) {
     );
 }
 
-
-
 //Como seria a implementação de estilos em React-Native
 /* const styles = new StyleSheet(
     {

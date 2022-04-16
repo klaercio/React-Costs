@@ -4,26 +4,24 @@ import Contact from './components/Pages/Contact.js';
 import Company from './components/Pages/Company.js';
 import NewProject from './components/Pages/NewProject.js';
 import Container from './components/layouts/Container.js';
-
+import NavBar from './components/layouts/NavBar.js';
+import Footer from './components/layouts/Footer.js'
+import Projects from './components/Pages/Projects.js';
 
 function App() {
   return (
     <Router>
-      <ul>
-        <Link to="/">Home</Link>
-        <Link to="/Contact">Contato</Link>
-        <Link to="/Company">Empresa</Link>
-        <Link to="/NewProject">Novo Projeto</Link>
-      </ul>
+      <NavBar/>
       <Container customClass='min-height'>
         <Routes>
           <Route exact path='/' element={<Home/>}/>
-          <Route path='/Contact' element={<Contact/>}/>
+          <Route path='/Projects' element={<Projects/>}/>
           <Route path='/Company' element={<Company/>}/>
           <Route path='/NewProject' element={<NewProject/>}/>
+          <Route path='/Contact' element={<Contact/>}/>
         </Routes>
       </Container>  
-      <footer>Footer</footer>
+      <Footer/>
     </Router>
   );
 }
