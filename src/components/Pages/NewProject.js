@@ -20,7 +20,7 @@ export default function NewProject() {
         })
           .then((resp) => resp.json())
           .then((data) => {
-            history('/projects', { message: 'Projeto criado com sucesso!' })
+            history('/projects', { state: {message: 'Projeto criado com sucesso!'} })
           })
       }
 
